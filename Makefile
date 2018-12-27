@@ -1,4 +1,4 @@
 
 
 run: 
-	@python questao5/q5.py
+	@python questoes/q5.py
