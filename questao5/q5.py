@@ -7,13 +7,18 @@ class FindKey:
     def __init__(self, file, key):
         self.file = file
         self.key = key
+        self.results = []
 
     def _finditem(self, obj, key):
-        # import pdb; pdb.set_trace()
+
         if key in obj:
-            return obj[key]
-        elif key.title() in obj:
-            return obj[key.title()]
+            self.results.append(obj[key])
+
+        elif type(key) is str and key.title() in obj:
+            self.results.append(obj[key.title()])
+
+        elif type(key) is str and key.upper() in obj:
+            self.results.append(obj[key.upper()])
 
         for k, v in obj.items():
             if isinstance(v, dict):
@@ -21,7 +26,8 @@ class FindKey:
 
     @property
     def get_value(self):
-        print(self._finditem(self.file, self.key))
+        self._finditem(self.file, self.key)
+        print(self.results)
 
 
 if __name__ == '__main__':
@@ -29,6 +35,7 @@ if __name__ == '__main__':
     with open('files/pessoa.json') as f:
         data = json.load(f)
 
-    key = "age"
-    results = FindKey(data, key)
-    print(results.get_value)
+    for key in ["age", "name", "cpf", "gender", 7]:
+
+        results = FindKey(data, key)
+        results.get_value
