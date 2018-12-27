@@ -37,5 +37,5 @@ if __name__ == '__main__':
 
     for key in ["age", "name", "cpf", "gender", 7]:
 
-        results = FindKey(data, key)
-        results.get_value
+        find_key = FindKey(data, key)
+        find_key.get_value
