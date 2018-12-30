@@ -41,5 +41,5 @@ if __name__ == '__main__':
 
     for provider in ["facebook", "zooxwifi", "bigdata_corp", "additional_data"]:
 
-        find_key = FindKey(data, "Jonas, o brabo", provider)
+        find_key = FindKey(data, "08151292709", provider)
         find_key.get_key
