@@ -2,7 +2,7 @@ import json
 from pprint import pprint
 
 
-class FindKey:
+class FindValue:
 
     def __init__(self, file, key):
         self.file = file
@@ -37,5 +37,5 @@ if __name__ == '__main__':
 
     for key in ["age", "name", "cpf", "gender", 7]:
 
-        find_key = FindKey(data, key)
-        find_key.get_value
+        find_value = FindValue(data, key)
+        find_value.get_value

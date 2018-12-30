@@ -2,29 +2,36 @@ import json
 from pprint import pprint
 
 
-class FindValue:
+class FindKey:
 
-    def __init__(self, file, value):
+    def __init__(self, file, value, provider):
         self.file = file
         self.value = value
-        self.results = []
+        self.provider = provider
+        self.response = None
 
-    def _finditem(self):
-        import pdb; pdb.set_trace()
+    @staticmethod
+    def make_response(key=None, provider=None):
+        if key and provider:
+            return "Chave: {} Provider: {}".format(key, provider)
 
-        for provider in ["facebook", "zooxwifi", "bigdata_corp", "additional_data"]:
-            for k, v in self.file[provider].items():
+    def _finditem(self, obj):
+
+        for k, v in obj.items():
+            try:
                 if isinstance(v, dict):
-                    self._finditem(v, value, provider)
-
-                elif v == value:
-                    self.results.append(str("Chave:", k, "Provider:", provider))
+                    self._finditem(v)
+                elif isinstance(v, list):
+                    for x in v:
+                        self._finditem(x)
+                elif v == self.value:
+                    return print(FindKey.make_response(k, self.provider))
+            except Exception as e:
+                continue
 
     @property
     def get_key(self):
-        
-        self._finditem()
-        print(self.results)
+        self.response = self._finditem(self.file[self.provider])
 
 
 if __name__ == '__main__':
@@ -32,7 +39,7 @@ if __name__ == '__main__':
     with open('files/pessoa.json') as f:
         data = json.load(f)
 
-    # for value in []:
+    for provider in ["facebook", "zooxwifi", "bigdata_corp", "additional_data"]:
 
-    find_value = FindValue(data, "004893847")
-    find_value.get_key
+        find_key = FindKey(data, "Jonas, o brabo", provider)
+        find_key.get_key
