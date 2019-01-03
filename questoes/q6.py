@@ -39,7 +39,7 @@ if __name__ == '__main__':
     with open('files/pessoa.json') as f:
         data = json.load(f)
 
-    for provider in ["facebook", "zooxwifi", "bigdata_corp", "additional_data"]:
-
+    for provider in ["facebook", "zooxwifi", "bigdata_corp",
+                     "additional_data"]:
         find_key = FindKey(data, "08151292709", provider)
         find_key.get_key

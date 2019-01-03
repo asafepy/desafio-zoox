@@ -1,5 +1,4 @@
 import json
-from pprint import pprint
 
 
 class FindValue:
@@ -36,6 +35,5 @@ if __name__ == '__main__':
         data = json.load(f)
 
     for key in ["age", "name", "cpf", "gender", 7]:
-
         find_value = FindValue(data, key)
         find_value.get_value
