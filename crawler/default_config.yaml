@@ -1,0 +1,2 @@
+database: sqlite:///noticias.db
+local_file_name: noticias.csv
