@@ -1,4 +1,4 @@
-#Questões Práticas
+# Questões Práticas
 
 Para execurtar cada uma das questões pode-se utilizar o comando make seguido abaixo:
 
