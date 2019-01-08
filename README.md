@@ -1,53 +1,63 @@
-# Web Crawler
+#Questões Práticas
 
-The purpose of this code is to create a crawler that visits the site epocacosmeticos.com.br and save a .csv file with the product name, title and url of each product page found.
+Para execurtar cada uma das questões pode-se utilizar o comando make seguido abaixo:
 
-Rules:
+```console
+
+make q5
+make q6
+make q7
+make q8
+make q9
+make q11
+make q12
+
+```
+
+# Crawler
+
+O objetivo deste código é criar um rastreador que visite o site oantagonista.com e salvar um arquivo .csv as notícias mais recentes encontrada.
  
- - This file should not contain duplicate entries;
- - It is not allowed to use the sitemap to get all urls from the site; the site must in fact be visited and parsed to obtain the information;
- - Except for Scrapy, you can use the frameworks and libraries you want, as long as the main language used is Python;
- 
- 
-# Required
+# Dependência
  - Python 3
  
 # How to install
 
- 1. clone the repository.
- 2. create a virtualenv with Python 3.5. (https://virtualenv.pypa.io/en/stable/)
- 3. activate virtualenv.
- 4. install the dependencies. (pip install -r requirements.txt)
- 5. run the project.
+ 1. clone o repositório.
+ 2. crie um virtualenv com o Python 3. (https://virtualenv.pypa.io/en/stable/)
+ 3. ative virtualenv.
+ 4. instalar as dependências. (pip install -r requirements.txt)
+ 5. executar o projeto.
  
  ```console
- git clone https://github.com/asafepy/crawler-challenge.git
- cd crawler-challenge
+ git clone https://github.com/asafepy/desafio-zoox.git
+ cd desafio-zoox
  virtualenv -p python3 .virtualenv
  source .virtualenv/bin/activate
  pip install -r requirements.txt
+ cd crawler
  make install
  make run
 ```
 
-# How to Run:
+# Como executar:
 
-1. Install Requirements and the Application;  
+1. Instalar requisitos e o aplicativo;  
 	- pip install -r requirements.txt
  
-2. Create Application Database;
+2. Criar banco de dados de aplicativos;
 	- python core/db/database.py
  
-3. Rotate Crawler;  
+3. Executar o Crawler;  
 	- python core/modules/crawler.py
         
-4. Rotating the Processor;
+4. Executando o Processor;
 	- python core/modules/processor.py
 
-5. Rotate Indexer:
+5. Executando Indexer:
 	- python core/modules/indexer.py
 
-7. Using Makefile
+7. Usando o Makefile
 	
 ```console
 make run
@@ -56,15 +66,11 @@ make run
 ## Modules (core/modules) 
  
 ### crawler.py (MultiThread)
-- Responsible for capturing links from the url informed.
-
-
+- Responsável pela captura de links do URL informado.
 
 ### processor.py (Multiprocess)
-- Responsible for reading the raw information in the database (WAIT) and updating it.
-- This is a multiprocess application, you can keep running in the background and you can upload as many applications as you want, you can add more machines and / or more processes to increase the processing speed.
-
+- Responsável por ler as informações brutas no banco de dados (WAIT) e atualizá-lo.
+- Este é um aplicativo multiprocessado, você pode continuar executando em segundo plano e pode carregar quantos aplicativos desejar, você pode adicionar mais máquinas e / ou mais processos para aumentar a velocidade de processamento.
 
 ### indexer.py (SingleProcess)
-- Responsible for generating the csv file, queries the database for all records processed and indexes in a csv worksheet.
-- The indexer can be rotated whenever you want, refreshing the spreadsheet data. if you do not have new data that has been processed nothing will be indexed. But if the processor has consumed new messages and updated information the worksheet will be updated with these new values.
+- Responsável pela geração do arquivo csv, consulta o banco de dados para todos os registros processados e índices em uma planilha csv.

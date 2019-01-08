@@ -17,9 +17,9 @@ class MediaTemp:
         self.data_frame.drop(self.make_list_index('state', 'CA'))
 
     def make_defaultdict(self):
-        
+
         dataset_CA = self.data_frame.head().describe()
-        
+
         media_month = dataset_CA.groupby(["month"])['temp'].mean()
         media_year = dataset_CA.groupby(["year"])['temp'].mean()
 
@@ -41,8 +41,6 @@ class MediaTemp:
         self.read_csv()
         self.remove_state()
         return self.write_csv_out()
-
-
 
 
 if __name__ == "__main__":
