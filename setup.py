@@ -1,5 +1,4 @@
 __author__ = 'asafe'
-import pytest
 
 from distutils.core import setup
 

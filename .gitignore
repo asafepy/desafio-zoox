@@ -5,3 +5,5 @@ build/
 *.db
 crawler/noticias.csv
 crawler/noticias.db
+.virtualenv/
+.vscode/

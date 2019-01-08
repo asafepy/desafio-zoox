@@ -41,9 +41,10 @@ O objetivo deste código é criar um rastreador que visite o site oantagonista.c
  cd desafio-zoox
  virtualenv -p python3 .virtualenv
  source .virtualenv/bin/activate
+ make install
  pip install -r requirements.txt
  cd crawler
- make install
+ 
  make run
 ```
 
