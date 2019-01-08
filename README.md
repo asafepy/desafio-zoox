@@ -1,7 +1,7 @@
 # Seção Teórica
 Encontra-se num arquivo PDF na raíz do repositório.
 
-[a link](https://github.com/asafepy/desafio-zoox/blob/master/secao-teorica.pdf.pdf)
+[Clique aqui!](https://github.com/asafepy/desafio-zoox/blob/master/secao-teorica.pdf.pdf)
 
 
 
