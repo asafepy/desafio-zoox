@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
 
-from core.db.model import News
+from crawler.core.db.model import News
 
 __author__ = 'asafe'
 

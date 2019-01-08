@@ -1,9 +1,9 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy_utils import create_database
-from config.config_file import appconfig
+from crawler.config.config_file import appconfig
 
-from core.db.model import Base
+from crawler.core.db.model import Base
 
 __author__ = 'asafe'
 

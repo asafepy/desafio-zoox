@@ -4,11 +4,11 @@ import json
 import re
 from multiprocessing import Process
 
-from core.db.database import get_engine_db
-from core.db.news import News_db
-from core.utils.parser import Parser
-from core.utils.validation import validate_url
-from core.modules.crawler import Crawler
+from crawler.core.db.database import get_engine_db
+from crawler.core.db.news import News_db
+from crawler.core.utils.parser import Parser
+from crawler.core.utils.validation import validate_url
+from crawler.core.modules.crawler import Crawler
 
 __author__ = 'asafe'
 

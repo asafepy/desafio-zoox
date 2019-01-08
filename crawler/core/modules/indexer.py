@@ -1,9 +1,9 @@
 import csv
 
 from config.config_file import appconfig
-from core.db.database import get_engine_db
-from core.utils.file_util import create_file
-from core.db.news import News_db
+from crawler.core.db.database import get_engine_db
+from crawler.core.utils.file_util import create_file
+from crawler.core.db.news import News_db
 
 
 __author__ = 'asafe'

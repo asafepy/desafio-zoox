@@ -11,10 +11,10 @@ setup(
     url='https://github.com/asafepy/desafio-zoox.git',
     packages=[
         'questoes',
-        'crawler/core',
-        'crawler/core.db',
-        'crawler/core.modules',
-        'crawler/core.utils',
-        'crawler/config',
+        'crawler.core',
+        'crawler.core.db',
+        'crawler.core.modules',
+        'crawler.core.utils',
+        'crawler.config',
     ],
 )
