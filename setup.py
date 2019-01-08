@@ -1,4 +1,5 @@
 __author__ = 'asafe'
+import pytest
 
 from distutils.core import setup
 
@@ -8,8 +9,13 @@ setup(
     description='desafio',
     author='asafe',
     author_email='asafeao@if.uff.br',
-    url='https://github.com/asafepy/crawler-challenge.git',
+    url='https://github.com/asafepy/desafio-zoox.git',
     packages=[
-      'questoes',
+        'questoes',
+        'crawler/core',
+        'crawler/core.db',
+        'crawler/core.modules',
+        'crawler/core.utils',
+        'crawler/config',
     ],
 )
