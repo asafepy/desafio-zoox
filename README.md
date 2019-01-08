@@ -14,7 +14,7 @@ make q12
 
 ```
 
-# Crawler
+# Questão 10 - Crawler
 
 O objetivo deste código é criar um rastreador que visite o site oantagonista.com e salvar um arquivo .csv as notícias mais recentes encontrada.
  
