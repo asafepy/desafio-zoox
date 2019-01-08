@@ -1,3 +1,10 @@
+# Seção Teórica
+Encontra-se num arquivo PDF na raíz do repositório.
+
+[a link](https://github.com/asafepy/desafio-zoox/blob/master/secao-teorica.pdf.pdf)
+
+
+
 # Questões Práticas
 
 Para execurtar cada uma das questões pode-se utilizar o comando make seguido abaixo:
