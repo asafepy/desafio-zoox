@@ -4,6 +4,22 @@ Encontra-se num arquivo PDF na raíz do repositório.
 [Clique aqui!](https://github.com/asafepy/desafio-zoox/blob/master/secao-teorica.pdf.pdf)
 
 
+# Como Instalar
+
+ 1. clone o repositório.
+ 2. crie um virtualenv com o Python 3. (https://virtualenv.pypa.io/en/stable/)
+ 3. ative virtualenv.
+ 4. instalar as dependências. (pip install -r requirements.txt)
+ 5. executar o projeto.
+ 
+ ```console
+ git clone https://github.com/asafepy/desafio-zoox.git
+ cd desafio-zoox
+ virtualenv -p python3 .virtualenv
+ source .virtualenv/bin/activate
+ pip install -r requirements.txt
+ make install
+```
 
 # Questões Práticas
 
@@ -27,47 +43,11 @@ O objetivo deste código é criar um rastreador que visite o site oantagonista.c
  
 # Dependência
  - Python 3
- 
-# How to install
-
- 1. clone o repositório.
- 2. crie um virtualenv com o Python 3. (https://virtualenv.pypa.io/en/stable/)
- 3. ative virtualenv.
- 4. instalar as dependências. (pip install -r requirements.txt)
- 5. executar o projeto.
- 
- ```console
- git clone https://github.com/asafepy/desafio-zoox.git
- cd desafio-zoox
- virtualenv -p python3 .virtualenv
- source .virtualenv/bin/activate
- make install
- pip install -r requirements.txt
- cd crawler
- 
- make run
-```
 
 # Como executar:
-
-1. Instalar requisitos e o aplicativo;  
-	- pip install -r requirements.txt
- 
-2. Criar banco de dados de aplicativos;
-	- python core/db/database.py
- 
-3. Executar o Crawler;  
-	- python core/modules/crawler.py
-        
-4. Executando o Processor;
-	- python core/modules/processor.py
-
-5. Executando Indexer:
-	- python core/modules/indexer.py
-
-7. Usando o Makefile
 	
 ```console
+cd crawler
 make run
 ```
 
