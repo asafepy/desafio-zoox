@@ -4,9 +4,6 @@
 # Desafio Zoox Smarth Data
 #------------------------------------------------------------------
 
-install:
-	python setup.py install
-
 remove_csv:
 	rm -f noticias.csv
 
