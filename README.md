@@ -48,6 +48,7 @@ O objetivo deste código é criar um rastreador que visite o site oantagonista.c
 	
 ```console
 cd crawler
+make install
 make run
 ```
 
