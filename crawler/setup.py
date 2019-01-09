@@ -10,6 +10,10 @@ setup(
     author_email='asafeao@if.uff.br',
     url='https://github.com/asafepy/desafio-zoox.git',
     packages=[
-        'questoes',
+        'core',
+        'core.db',
+        'core.modules',
+        'core.utils',
+        'config',
     ],
 )

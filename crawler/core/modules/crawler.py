@@ -5,8 +5,8 @@ import concurrent.futures
 from bs4 import BeautifulSoup
 from sqlalchemy.orm import Session
 
-from crawler.core.db.database import get_engine_db
-from crawler.core.db.model import News
+from core.db.database import get_engine_db
+from core.db.model import News
 
 
 __author__ = 'asafe'

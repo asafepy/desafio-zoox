@@ -2,7 +2,7 @@ import yaml
 
 
 ## load config files
-DEFAULT_CONFIG_FILE = "crawler/default_config.yaml"
+DEFAULT_CONFIG_FILE = "default_config.yaml"
 
 appconfig = {}
 
