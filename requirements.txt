@@ -1,7 +1,7 @@
 beautifulsoup4==4.6.3
 pytest==3.7.1
 requests==2.19.1
-urllib3==1.23
+urllib3==1.26.5
 matplotlib==3.0.2
 asn1crypto==0.24.0
 atomicwrites==1.1.5
@@ -35,7 +35,7 @@ service-identity==17.0.0
 six==1.11.0
 SQLAlchemy==1.2.10
 SQLAlchemy-Utils==0.33.3
-urllib3==1.23
+urllib3==1.26.5
 w3lib==1.19.0
 zope.interface==4.5.0
 pandas
